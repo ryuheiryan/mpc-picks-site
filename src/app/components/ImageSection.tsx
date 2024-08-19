@@ -9,7 +9,7 @@ export default function ImageSection({
 }) {
   return (
     <div className={`flex container justify-center ${className}`}>
-      <img src={src} alt={alt} />
+      <img src={src} alt={alt} className="object-contain" />
     </div>
   );
 }

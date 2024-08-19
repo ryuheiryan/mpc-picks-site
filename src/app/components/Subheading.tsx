@@ -4,7 +4,7 @@ export default function Subheading({
   children: React.ReactNode;
 }) {
   return (
-    <h3 className="text-6xl xl:text-7xl font-semibold mb-4 merriweather-regular">
+    <h3 className="font-serif text-6xl xl:text-7xl font-normal mb-4">
       {children}
     </h3>
   );

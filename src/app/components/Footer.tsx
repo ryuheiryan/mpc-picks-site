@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <div className="bg-white h-16 sticky bottom-0">
-      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+    <div className="bg-white">
+      {/* <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
         <defs>
           <pattern
             id="pattern_white"
@@ -42,6 +42,17 @@ export default function Footer() {
           fill="url(#pattern_white)"
           opacity="1"
         />
+      </svg> */}
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z"
+          fill="#0cc0df"
+        ></path>
       </svg>
     </div>
   );

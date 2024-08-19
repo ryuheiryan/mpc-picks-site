@@ -11,28 +11,34 @@ import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <main className="flex flex-col m">
-      <div className="flex flex-col h-screen justify-between mt-24 xl:mt-0">
-        <div className="flex flex-col xl:flex-row">
-          <div className="flex flex-col flex-auto justify-center items-center xl:basis-1/2 gap-48">
+    <main className="flex flex-col">
+      <div className="flex flex-col h-dvh justify-between">
+        <Header />
+        <MainSection>
+          <div className="flex flex-col flex-auto justify-center items-center xl:basis-3/5 gap-48">
             <div className="flex flex-col gap-8">
-              <p className="text-2xl xl:text-3xl">SECURE YOUR FUTURE!</p>
+              <p className="font-sans text-2xl xl:text-3xl text-center">
+                SECURE YOUR FUTURE!
+              </p>
               <div>
                 <Heading>MPC</Heading>
                 <Heading>Picks</Heading>
               </div>
             </div>
             <div className="flex flex-row gap-64">
-              <a className="text-xl xl:text-2xl">VIEW PRODUCTS</a>
-              <a className="text-xl xl:text-2xl underline">ORDER NOW!</a>
+              <a className="font-sans text-xl xl:text-2xl">VIEW PRODUCTS</a>
+              <a className="font-sans text-xl xl:text-2xl underline">
+                ORDER NOW!
+              </a>
             </div>
           </div>
           <ImageSection
-            src="/delivery_icon_temp.png"
+            src="/delivery_icon.webp"
             alt="Delivery"
-            className="collapse xl:visible h-screen flex-row-reverse basis-1/2"
+            className="hidden 2xl:flex  basis-2/5"
           />
-        </div>
+        </MainSection>
+        <Footer />
       </div>
       <Screen>
         <MainSection className="gap-16 xl:gap-32">
@@ -69,7 +75,9 @@ export default function Home() {
         <OrderButtonSection />
       </Screen>
       <Screen>
-        <Subheading>Household and Health Essentials</Subheading>
+        <MainSection>
+          <Subheading>Household and Health Essentials</Subheading>
+        </MainSection>
         <MainSection className="gap-4">
           <ImageSection
             src="/fiber_health.png"
@@ -95,7 +103,6 @@ export default function Home() {
         </MainSection>
         <OrderButtonSection />
       </Screen>
-      <Footer />
     </main>
   );
 }
