@@ -1,113 +1,101 @@
-import Image from "next/image";
+import Screen from "./components/Screen";
+import Subheading from "./components/Subheading";
+import Heading from "./components/Heading";
+import OrderButtonSection from "./components/OrderButtonSection";
+import MainSection from "./components/MainSection";
+import Info from "./components/Info";
+import Subsection from "./components/Subsection";
+import ImageSection from "./components/ImageSection";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex flex-col">
+      <div className="flex flex-col h-screen justify-between mt-16 xl:mt-0">
+        <div className="flex flex-col xl:flex-row">
+          <div className="flex flex-col flex-auto justify-center items-center xl:basis-1/2 gap-48">
+            <div className="flex flex-col gap-8">
+              <p className="text-2xl xl:text-3xl">SECURE YOUR FUTURE!</p>
+              <div>
+                <Heading>MPC</Heading>
+                <Heading>Picks</Heading>
+              </div>
+            </div>
+            <div className="flex flex-row gap-64">
+              <a className="text-xl xl:text-2xl">VIEW PRODUCTS</a>
+              <a className="text-xl xl:text-2xl">ORDER NOW</a>
+            </div>
+          </div>
+          <ImageSection
+            src="/delivery_icon_temp.png"
+            alt="Delivery"
+            className="collapse xl:visible h-screen flex-row-reverse basis-1/2"
+          />
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <Screen>
+        <MainSection className="gap-16 xl:gap-32">
+          <ImageSection src="/climbs.png" alt="Climbs" />
+          <Subsection>
+            <Subheading>
+              Protect What Matters Most with Our Insurance Plans
+            </Subheading>
+            <Info>
+              At MPC Picks, we understand that life is unpredictable. That's why
+              we offer a range of insurance plans tailored to meet your needs.
+              From comprehensive coverage to essential protection, our plans
+              provide you with peace of mind. Plus, when you purchase any
+              insurance plan, you'll receive a free digital book to enrich your
+              life further.
+            </Info>
+          </Subsection>
+        </MainSection>
+        <OrderButtonSection />
+      </Screen>
+      <Screen>
+        <MainSection className="gap-16 xl:gap-32">
+          <Subsection>
+            <Subheading>Explore Our Free Digital Books</Subheading>
+            <Info>
+              When you purchase any of our insurance plans, you'll gain access
+              to our exclusive library of digital books. These eBooks cover a
+              range of topics, from personal finance to wellness, helping you
+              live a richer, more informed life.
+            </Info>
+          </Subsection>
+          <ImageSection src="/digital_books.png" alt="Digital Books" />
+        </MainSection>
+        <OrderButtonSection />
+      </Screen>
+      <Screen>
+        <Subheading>Household and Health Essentials</Subheading>
+        <MainSection className="gap-4">
+          <ImageSection
+            src="/fiber_health.png"
+            alt="Fiber Health Food Supplement"
+            className="basis-1/2"
+          />
+          <Info className="basis-1/2">
+            Support your digestive health with our Fiber Health Food Supplement.
+            Made from natural ingredients, it helps promote regularity and
+            overall gut health, keeping you feeling light and energetic.
+          </Info>
+          <ImageSection
+            src="/cleaning_powder.png"
+            alt="Ultra-Clean Detergent
+            Soap"
+            className="basis-1/3"
+          />
+          <Info className="basis-1/2">
+            Experience the power of deep cleaning with our Ultra-Clean Detergent
+            Soap. Formulated to remove tough stains and leave your clothes
+            smelling fresh, it's gentle on fabric yet tough on dirt.
+          </Info>
+        </MainSection>
+        <OrderButtonSection />
+      </Screen>
+      <Footer />
     </main>
   );
 }
