@@ -11,8 +11,8 @@ import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
-      <div className="flex flex-col h-screen justify-between mt-16 xl:mt-0">
+    <main className="flex flex-col m">
+      <div className="flex flex-col h-screen justify-between mt-24 xl:mt-0">
         <div className="flex flex-col xl:flex-row">
           <div className="flex flex-col flex-auto justify-center items-center xl:basis-1/2 gap-48">
             <div className="flex flex-col gap-8">
@@ -24,7 +24,7 @@ export default function Home() {
             </div>
             <div className="flex flex-row gap-64">
               <a className="text-xl xl:text-2xl">VIEW PRODUCTS</a>
-              <a className="text-xl xl:text-2xl">ORDER NOW</a>
+              <a className="text-xl xl:text-2xl underline">ORDER NOW!</a>
             </div>
           </div>
           <ImageSection
@@ -42,12 +42,12 @@ export default function Home() {
               Protect What Matters Most with Our Insurance Plans
             </Subheading>
             <Info>
-              At MPC Picks, we understand that life is unpredictable. That's why
-              we offer a range of insurance plans tailored to meet your needs.
-              From comprehensive coverage to essential protection, our plans
-              provide you with peace of mind. Plus, when you purchase any
-              insurance plan, you'll receive a free digital book to enrich your
-              life further.
+              At MPC Picks, we understand that life is unpredictable.
+              That&apos;s why we offer a range of insurance plans tailored to
+              meet your needs. From comprehensive coverage to essential
+              protection, our plans provide you with peace of mind. Plus, when
+              you purchase any insurance plan, you&apos;ll receive a free
+              digital book to enrich your life further.
             </Info>
           </Subsection>
         </MainSection>
@@ -58,10 +58,10 @@ export default function Home() {
           <Subsection>
             <Subheading>Explore Our Free Digital Books</Subheading>
             <Info>
-              When you purchase any of our insurance plans, you'll gain access
-              to our exclusive library of digital books. These eBooks cover a
-              range of topics, from personal finance to wellness, helping you
-              live a richer, more informed life.
+              When you purchase any of our insurance plans, you&apos;ll gain
+              access to our exclusive library of digital books. These eBooks
+              cover a range of topics, from personal finance to wellness,
+              helping you live a richer, more informed life.
             </Info>
           </Subsection>
           <ImageSection src="/digital_books.png" alt="Digital Books" />
@@ -90,7 +90,7 @@ export default function Home() {
           <Info className="basis-1/2">
             Experience the power of deep cleaning with our Ultra-Clean Detergent
             Soap. Formulated to remove tough stains and leave your clothes
-            smelling fresh, it's gentle on fabric yet tough on dirt.
+            smelling fresh, it&apos;s gentle on fabric yet tough on dirt.
           </Info>
         </MainSection>
         <OrderButtonSection />
