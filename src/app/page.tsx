@@ -63,7 +63,7 @@ export default function Home() {
       <div className="flex flex-col h-dvh justify-between">
         <Header />
         <MainSection>
-          <div className="flex flex-col flex-auto justify-center items-center xl:basis-3/5 gap-48">
+          <div className="flex flex-col flex-auto justify-center items-center xl:basis-2/3 gap-32">
             <div className="flex flex-col gap-8">
               <p className="font-sans text-2xl xl:text-3xl text-center">
                 SECURE YOUR FUTURE!
@@ -83,15 +83,15 @@ export default function Home() {
           <ImageSection
             src="/delivery_icon.webp"
             alt="Delivery"
-            className="hidden 2xl:flex  basis-2/5"
+            className="hidden 2xl:flex basis-1/3"
           />
         </MainSection>
         <Footer />
       </div>
       <Screen>
-        <MainSection className="gap-16 xl:gap-32">
-          <ImageSection src="/climbs.png" alt="Climbs" />
-          <Subsection>
+        <MainSection className="gap-16">
+          <ImageSection src="/climbs.png" alt="Climbs" className="basis-1/4" />
+          <Subsection className="basis-3/4">
             <Subheading>
               Protect What Matters Most with Our Insurance Plans
             </Subheading>
@@ -108,8 +108,8 @@ export default function Home() {
         <OrderButtonSection />
       </Screen>
       <Screen>
-        <MainSection className="gap-16 xl:gap-32">
-          <Subsection>
+        <MainSection className="gap-16">
+          <Subsection className="basis-3/4">
             <Timer
               days={days}
               hours={hours}
@@ -124,7 +124,11 @@ export default function Home() {
               helping you live a richer, more informed life.
             </Info>
           </Subsection>
-          <ImageSection src="/digital_books.png" alt="Digital Books" />
+          <ImageSection
+            src="/digital_books.png"
+            alt="Digital Books"
+            className="basis-1/4"
+          />
         </MainSection>
         <OrderButtonSection />
       </Screen>
@@ -136,9 +140,9 @@ export default function Home() {
           <ImageSection
             src="/fiber_health.png"
             alt="Fiber Health Food Supplement"
-            className="basis-1/2"
+            className="basis-1/4"
           />
-          <Info className="basis-1/2">
+          <Info className="basis-1/4">
             Support your digestive health with our Fiber Health Food Supplement.
             Made from natural ingredients, it helps promote regularity and
             overall gut health, keeping you feeling light and energetic.
@@ -147,9 +151,9 @@ export default function Home() {
             src="/cleaning_powder.png"
             alt="Ultra-Clean Detergent
             Soap"
-            className="basis-1/3"
+            className="basis-1/4"
           />
-          <Info className="basis-1/2">
+          <Info className="basis-1/4">
             Experience the power of deep cleaning with our Ultra-Clean Detergent
             Soap. Formulated to remove tough stains and leave your clothes
             smelling fresh, it&apos;s gentle on fabric yet tough on dirt.
