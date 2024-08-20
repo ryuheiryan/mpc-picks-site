@@ -8,8 +8,8 @@ import MainSection from "./components/MainSection";
 import Info from "./components/Info";
 import Subsection from "./components/Subsection";
 import ImageSection from "./components/ImageSection";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import ScreenFooter from "./components/ScreenFooter";
+import ScreenHeader from "./components/ScreenHeader";
 import Timer from "./components/Timer";
 import { useEffect, useState } from "react";
 
@@ -64,7 +64,7 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <div className="flex flex-col h-dvh justify-between">
-        <Header />
+        <ScreenHeader />
         <MainSection>
           <div className="flex flex-col flex-auto justify-center items-center xl:basis-2/3 gap-32">
             <div className="flex flex-col gap-8">
@@ -89,7 +89,7 @@ export default function Home() {
             className="hidden 2xl:flex basis-1/3"
           />
         </MainSection>
-        <Footer />
+        <ScreenFooter />
       </div>
       <Screen>
         <MainSection className="gap-16">
