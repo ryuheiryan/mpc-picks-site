@@ -68,7 +68,7 @@ export default function Timer({ days, hours, minutes, seconds }: timeProps) {
 
   return (
     <div className="">
-      <div className="grid grid-cols-2 gap-4 px-10 md:flex md:items-center md:justify-between rounded-xl md:px-6 md:pb-8 ">
+      <div className="grid grid-cols-2 gap-4 px-10 md:flex md:items-center md:justify-between rounded-xl md:px-6 pb-8 ">
         <TimerBox num={days} unit="DAYS" flip={daysFlip} />
         <span className=" hidden text-5xl -mt-8 md:inline-block md:text-7xl font-normal text-gray-50 ">
           :
