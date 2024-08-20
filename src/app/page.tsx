@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   // const imageFolder = "https://ryuheiryan.github.io/mpc-picks-site/";
-  const imageFolder = "/";
+  const imageFolder = window.location.href;
 
   const [time, setTime] = useState<number>(7);
   const [days, setDays] = useState<number>(0);
