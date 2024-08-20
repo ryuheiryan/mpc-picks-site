@@ -75,7 +75,7 @@ export default function Home() {
                 <Heading>Picks</Heading>
               </div>
             </div>
-            <div className="flex flex-row gap-64">
+            <div className="flex flex-row gap-16 md:gap-32 xl:gap-64">
               <a className="font-sans text-xl xl:text-2xl">VIEW PRODUCTS</a>
               <a className="font-sans text-xl xl:text-2xl underline">
                 ORDER NOW!

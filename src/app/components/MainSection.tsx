@@ -7,7 +7,7 @@ export default function MainSection({
 }) {
   return (
     <div
-      className={`flex flex-col xl:flex-row items-center flex-auto px-32 ${className}`}
+      className={`flex flex-col xl:flex-row items-center flex-auto px-16 xl:px-32 ${className}`}
     >
       {children}
     </div>

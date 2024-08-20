@@ -6,7 +6,9 @@ export default function Info({
   className?: string;
 }) {
   return (
-    <p className={`font-sans text-2xl xl:text-3xl leading-loose ${className}`}>
+    <p
+      className={`font-sans text-xl md:text-2xl xl:text-3xl leading-loose ${className}`}
+    >
       {children}
     </p>
   );
