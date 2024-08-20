@@ -14,6 +14,8 @@ import Timer from "./components/Timer";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+  const imageFolder = "https://ryuheiryan.github.io/mpc-picks-site/";
+
   const [time, setTime] = useState<number>(7);
   const [days, setDays] = useState<number>(0);
   const [hours, setHours] = useState<number>(0);
@@ -81,7 +83,7 @@ export default function Home() {
             </div>
           </div>
           <ImageSection
-            src="/delivery_icon.webp"
+            src={`${imageFolder}/delivery_icon.webp`}
             alt="Delivery"
             className="hidden 2xl:flex basis-1/3"
           />
@@ -90,7 +92,11 @@ export default function Home() {
       </div>
       <Screen>
         <MainSection className="gap-16">
-          <ImageSection src="/climbs.png" alt="Climbs" className="basis-1/4" />
+          <ImageSection
+            src={`${imageFolder}/climbs.png`}
+            alt="Climbs"
+            className="basis-1/4"
+          />
           <Subsection className="basis-3/4">
             <Subheading>
               Protect What Matters Most with Our Insurance Plans
@@ -125,7 +131,7 @@ export default function Home() {
             </Info>
           </Subsection>
           <ImageSection
-            src="/digital_books.png"
+            src={`${imageFolder}/digital_books.png`}
             alt="Digital Books"
             className="basis-1/4"
           />
@@ -138,7 +144,7 @@ export default function Home() {
         </MainSection>
         <MainSection className="gap-4">
           <ImageSection
-            src="/fiber_health.png"
+            src={`${imageFolder}/fiber_health.png`}
             alt="Fiber Health Food Supplement"
             className="basis-1/4"
           />
@@ -148,7 +154,7 @@ export default function Home() {
             overall gut health, keeping you feeling light and energetic.
           </Info>
           <ImageSection
-            src="/cleaning_powder.png"
+            src={`${imageFolder}/cleaning_powder.png`}
             alt="Ultra-Clean Detergent
             Soap"
             className="basis-1/4"
