@@ -1,3 +1,5 @@
+"use client";
+
 import Screen from "./components/Screen";
 import Subheading from "./components/Subheading";
 import Heading from "./components/Heading";
@@ -8,8 +10,54 @@ import Subsection from "./components/Subsection";
 import ImageSection from "./components/ImageSection";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Timer from "./components/Timer";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [time, setTime] = useState<number>(7);
+  const [days, setDays] = useState<number>(0);
+  const [hours, setHours] = useState<number>(0);
+  const [minutes, setMinutes] = useState<number>(0);
+  const [seconds, setSeconds] = useState<number>(0);
+
+  const timeToDays = time * 60 * 60 * 24 * 1000;
+
+  let countDownDate = new Date().getTime() + timeToDays;
+
+  useEffect(() => {
+    var updateTime = setInterval(() => {
+      var now = new Date().getTime();
+
+      var difference = countDownDate - now;
+
+      var newDays = Math.floor(difference / (1000 * 60 * 60 * 24));
+      var newHours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var newMinutes = Math.floor(
+        (difference % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      var newSeconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      setDays(newDays);
+      setHours(newHours);
+      setMinutes(newMinutes);
+      setSeconds(newSeconds);
+
+      if (difference <= 0) {
+        clearInterval(updateTime);
+        setDays(0);
+        setHours(0);
+        setMinutes(0);
+        setSeconds(0);
+      }
+    });
+
+    return () => {
+      clearInterval(updateTime);
+    };
+  }, [time]);
+
   return (
     <main className="flex flex-col">
       <div className="flex flex-col h-dvh justify-between">
@@ -62,6 +110,12 @@ export default function Home() {
       <Screen>
         <MainSection className="gap-16 xl:gap-32">
           <Subsection>
+            <Timer
+              days={days}
+              hours={hours}
+              minutes={minutes}
+              seconds={seconds}
+            />
             <Subheading>Explore Our Free Digital Books</Subheading>
             <Info>
               When you purchase any of our insurance plans, you&apos;ll gain
