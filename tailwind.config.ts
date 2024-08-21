@@ -18,6 +18,9 @@ const config: Config = {
           'to':{transform:  'rotateX(180deg)', transformOrigin: '50% bottom ',}
         }
       },
+      backgroundImage: {
+        'hero-image': "url('/hero_image.jpg')",
+      },
       colors: {
         primary: '#004aad',
         secondary: '#0cc0df',

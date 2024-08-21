@@ -1,6 +1,6 @@
 export default function ScreenHeader() {
   return (
-    <div className="bg-white rotate-180">
+    <div className="z-20 rotate-180">
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"

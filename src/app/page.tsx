@@ -12,6 +12,8 @@ import ScreenFooter from "./components/ScreenFooter";
 import ScreenHeader from "./components/ScreenHeader";
 import Timer from "./components/Timer";
 import { useEffect, useState } from "react";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 export default function Home() {
   // const imageFolder = "https://ryuheiryan.github.io/mpc-picks-site/";
@@ -63,9 +65,12 @@ export default function Home() {
 
   return (
     <main className="flex flex-col">
-      <div className="flex flex-col h-dvh justify-between">
-        <ScreenHeader />
-        <MainSection>
+      <div
+        className="flex flex-col h-dvh justify-between bg-[url('/hero_image.jpg')] bg-center before:content-[''] before:bg-black/75 before:absolute before:inset-0"
+        id="Home"
+      >
+        <Header />
+        <MainSection className="z-10 text-white">
           <div className="flex flex-col flex-auto justify-center items-center xl:basis-2/3 gap-32">
             <div className="flex flex-col gap-8">
               <p className="font-sans text-2xl xl:text-3xl text-center">
@@ -83,91 +88,97 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <ImageSection
+          {/* <ImageSection
             src={`${imageFolder}delivery_icon.webp`}
             alt="Delivery"
-            className="hidden 2xl:flex basis-1/3"
-          />
+            className="z-10 h-[175%] hidden 2xl:flex basis-1/3"
+          /> */}
         </MainSection>
-        <ScreenFooter />
       </div>
-      <Screen>
-        <MainSection className="gap-16">
-          <ImageSection
-            src={`${imageFolder}climbs.png`}
-            alt="Climbs"
-            className="basis-1/4"
-          />
-          <Subsection className="basis-3/4">
-            <Subheading>
-              Protect What Matters Most with Our Insurance Plans
-            </Subheading>
-            <Info>
-              At MPC Picks, we understand that life is unpredictable.
-              That&apos;s why we offer a range of insurance plans tailored to
-              meet your needs. From comprehensive coverage to essential
-              protection, our plans provide you with peace of mind. Plus, when
-              you purchase any insurance plan, you&apos;ll receive a free
-              digital book to enrich your life further.
-            </Info>
-          </Subsection>
-        </MainSection>
-        <OrderButtonSection />
-      </Screen>
-      <Screen>
-        <MainSection className="gap-16">
-          <Subsection className="basis-3/4">
-            <Timer
-              days={days}
-              hours={hours}
-              minutes={minutes}
-              seconds={seconds}
+      <div id="Products">
+        <Screen>
+          <MainSection className="gap-16">
+            <ImageSection
+              src={`${imageFolder}climbs.png`}
+              alt="Climbs"
+              className="basis-1/4"
             />
-            <Subheading>Explore Our Free Digital Books</Subheading>
-            <Info>
-              When you purchase any of our insurance plans, you&apos;ll gain
-              access to our exclusive library of digital books. These eBooks
-              cover a range of topics, from personal finance to wellness,
-              helping you live a richer, more informed life.
+            <Subsection className="basis-3/4">
+              <Subheading>
+                Protect What Matters Most with Our Insurance Plans
+              </Subheading>
+              <Info>
+                At MPC Picks, we understand that life is unpredictable.
+                That&apos;s why we offer a range of insurance plans tailored to
+                meet your needs. From comprehensive coverage to essential
+                protection, our plans provide you with peace of mind. Plus, when
+                you purchase any insurance plan, you&apos;ll receive a free
+                digital book to enrich your life further.
+              </Info>
+            </Subsection>
+          </MainSection>
+          <OrderButtonSection />
+        </Screen>
+        <Screen>
+          <MainSection className="gap-16">
+            <Subsection className="basis-3/4">
+              <Timer
+                days={days}
+                hours={hours}
+                minutes={minutes}
+                seconds={seconds}
+              />
+              <Subheading>Explore Our Digital Books</Subheading>
+              <Info>
+                When you purchase any of our insurance plans, you&apos;ll gain
+                access to our exclusive library of digital books. These eBooks
+                cover a range of topics, from personal finance to wellness,
+                helping you live a richer, more informed life.
+              </Info>
+            </Subsection>
+            <ImageSection
+              src={`${imageFolder}digital_books.png`}
+              alt="Digital Books"
+              className="basis-1/4"
+            />
+          </MainSection>
+          <OrderButtonSection />
+        </Screen>
+        <Screen>
+          <MainSection>
+            <Subheading>Household and Health Essentials</Subheading>
+          </MainSection>
+          <MainSection className="gap-4">
+            <ImageSection
+              src={`${imageFolder}fiber_health.png`}
+              alt="Fiber Health Food Supplement"
+              className="basis-1/3"
+            />
+            <Info className="basis-2/3">
+              Support your digestive health with our Fiber Health Food
+              Supplement. Made from natural ingredients, it helps promote
+              regularity and overall gut health, keeping you feeling light and
+              energetic.
             </Info>
-          </Subsection>
-          <ImageSection
-            src={`${imageFolder}digital_books.png`}
-            alt="Digital Books"
-            className="basis-1/4"
-          />
-        </MainSection>
-        <OrderButtonSection />
-      </Screen>
-      <Screen>
-        <MainSection>
-          <Subheading>Household and Health Essentials</Subheading>
-        </MainSection>
-        <MainSection className="gap-4">
-          <ImageSection
-            src={`${imageFolder}fiber_health.png`}
-            alt="Fiber Health Food Supplement"
-            className="basis-1/4"
-          />
-          <Info className="basis-1/4">
-            Support your digestive health with our Fiber Health Food Supplement.
-            Made from natural ingredients, it helps promote regularity and
-            overall gut health, keeping you feeling light and energetic.
-          </Info>
-          <ImageSection
-            src={`${imageFolder}cleaning_powder.png`}
-            alt="Ultra-Clean Detergent
+            <ImageSection
+              src={`${imageFolder}cleaning_powder.png`}
+              alt="Ultra-Clean Detergent
             Soap"
-            className="basis-1/4"
-          />
-          <Info className="basis-1/4">
-            Experience the power of deep cleaning with our Ultra-Clean Detergent
-            Soap. Formulated to remove tough stains and leave your clothes
-            smelling fresh, it&apos;s gentle on fabric yet tough on dirt.
-          </Info>
-        </MainSection>
-        <OrderButtonSection />
-      </Screen>
+              className="basis-1/3"
+            />
+            <Info className="basis-2/3">
+              Experience the power of deep cleaning with our Ultra-Clean
+              Detergent Soap. Formulated to remove tough stains and leave your
+              clothes smelling fresh, it&apos;s gentle on fabric yet tough on
+              dirt.
+            </Info>
+          </MainSection>
+          <OrderButtonSection />
+        </Screen>
+      </div>
+      <div id="Contact">
+        <Footer />
+      </div>
     </main>
   );
 }
