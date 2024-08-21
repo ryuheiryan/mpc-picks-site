@@ -175,6 +175,20 @@ export default function Home() {
           </MainSection>
           <OrderButtonSection />
         </Screen>
+        <Screen>
+          <MainSection className="justify-between">
+            <div className="border-t-4 border-s-4 border-black p-8 mb-32 ms-32">
+              <Subheading>MPC Cooks</Subheading>
+            </div>
+            <div className="self-center">
+              <Subheading>&</Subheading>
+            </div>
+            <div className="border-b-4 border-e-4 border-black p-8 mt-32 me-32">
+              <Subheading>MPC Mugs</Subheading>
+            </div>
+          </MainSection>
+          <ImageSection src="/coming_soon.png" alt="" className="self-center" />
+        </Screen>
       </div>
       <div id="Contact">
         <Footer />
